@@ -1,4 +1,4 @@
-# Real time parking in POitiers
+# Real time parking in Poitiers
 ---
 
 This project displays real-time data about parking in Poitiers.
