@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="map.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito|Roboto"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div id="head" class="block d-flex align-items-center justify-content-between">
+        <p class="d-flex justify-content-between align-items-end">
+          <span> <img src="parking_64px.png"/> </span> 
+          <span id ="title">Parking Poitiers</span>
+        </p>
+        <div id="bouton" class="d-flex justify-content-center">
+          <a
+            onclick="getLocation(findNearestMarker)"
+            id="bouton1"
+            href="#"
+            class="btn btn-primary btn-color mb-2"
+            role="button"
+            >Trouver le parking <br/>
+            le plus proche de moi
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div id="main" class="block d-flex justify-content-between mt-3">
+      <div id="map"></div>
+      <div id="instructions"></div>
+      <div id="info">
+        <div id="geocoder" class="geocoder mt-4"></div>
+        <p id="park-select" class="text-center mt-4">Parking sélectionné</p>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>nom</td>
+              <td id="parking_name"></td>
+            </tr>
+            <tr>
+              <td>places restantes</td>
+              <td id="free_stations"></td>
+            </tr>
+            <tr>
+              <td>taux de remplissage</td>
+              <td id="tx_rempl"></td>
+            </tr>
+            <tr>
+              <td>mise à jour</td>
+              <td id="maj"></td>
+            </tr>
+          </tbody>    
+        </table>
+        <div class="d-flex justify-content-center mt-5">
+          <a
+            id="itineraire"
+            class="btn btn-primary btn-color"
+            href="#"
+            role="button"
+            >Itinéraire vers ce parking !
+          </a>          
+        </div>
+      </div>
+    </div>
+
+    <footer class="d-flex align-items-center justify-content-center"> 
+      <p class="mr-4"> © 2019 Antoine Parat</p> 
+      <p>logo : https://www.flaticon.com</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+    crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <script src="js/routing.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

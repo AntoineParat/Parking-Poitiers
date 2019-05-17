@@ -1,0 +1,175 @@
+@media screen and (min-width : 760px) {
+    .block { 
+        margin-left : 50px;
+        margin-right: 50px;
+    }
+    #map {
+        width: 54%;   
+    }
+
+    #info {
+        width: 44%;  
+    }
+
+    #instructions {
+        width: 44%;
+    }
+  
+    #bouton {
+        width: 44%;
+    }
+
+    footer {
+        height: 50px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #47B2D0;
+        color: white;
+        font-size : 0.7rem;
+      }
+}
+
+@media screen and (min-width : 1078px) {
+    .block { 
+        margin-left : 150px;
+        margin-right: 150px;
+    }
+
+    #map {
+        width: 64%;
+    }
+
+    #info {
+        width: 34%; 
+    }
+
+    #instructions {
+        width: 34%;
+    }
+
+    #bouton {
+        width: 34%;
+    }
+
+}
+
+@media screen and (max-width : 760px) {
+    img {
+        margin-left : 30px;
+    }
+
+    #map {
+        width: 90%;
+    }
+
+    #info {
+        width: 90%; 
+        margin-top : 20px;
+    }
+
+    #instructions {
+        width: 90%;
+    }
+
+    #head {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #title {
+        display: none;
+    }
+
+    #bouton {
+        width: 100%;
+    }
+
+    #bouton a {
+        font-size: 0.8em
+    }
+
+    footer {
+        height: 50px;
+        width: 100%;
+        margin-top : 40px;
+        background-color: #47B2D0;
+        color: white;
+        font-size : 0.7rem;
+      }
+}
+
+body {
+    background-color: #F1F1F1;
+}
+
+header {
+    height: 75px;
+    background-color: #47B2D0;
+}
+
+header p {
+    width: 400px;
+    font-family: 'nunito', cursive;
+    font-size: 2.5rem;
+    color : white;
+}
+
+#park-select {
+    font-family: 'nunito', cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-top : 1px solid #e9ecef;
+    padding-top : 8px;
+}
+
+.btn-color {
+    color: #fff;
+    background-color: #CC3D43;
+    border: none;
+}
+
+.btn-color:hover {
+    color: #fff;
+    background-color: #CC3D43;
+    opacity: 0.8;
+}
+
+.geocoder {
+    z-index:1;
+    max-width:100%; 
+}
+
+.mapboxgl-ctrl-geocoder { 
+    max-width:100%; 
+    margin-left: auto;
+    margin-right : auto;
+}
+  
+#map {
+    height: 600px;
+}
+
+#info {
+    height: 600px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0 #c0c0c0;
+    font-family: 'Roboto', sans-serif;
+    color: #444444;
+}
+
+#instructions {
+    height: 600px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0 #c0c0c0;
+    font-family: 'Roboto', sans-serif;
+    color: #444444;
+    overflow : scroll;
+    display: none;
+}
