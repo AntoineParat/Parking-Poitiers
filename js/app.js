@@ -188,6 +188,7 @@ document.addEventListener("click", function(e) {
     "mapboxgl-marker mapboxgl-marker-anchor-center") {
     currentPark(e.target.parentNode.parentNode.parentNode.parentNode.id) 
     getFreePlaces();
+    info.scrollIntoView();
     }
 });
 
