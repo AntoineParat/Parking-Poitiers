@@ -7,7 +7,7 @@ This website displays real-time data about parking in Poitiers.
 
 ## Open Data
 
-I'm using [Open Data Poitiers]([https://data.grandpoitiers.fr/pages/accueil/] API to fecth real-time infos.
+I'm using [Open Data Poitiers](https://data.grandpoitiers.fr/pages/accueil/) API to fecth real-time infos.
 
 ## Mapbox routing API
 
