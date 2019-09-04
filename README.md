@@ -1,5 +1,6 @@
 # Real time parking in Poitiers
----
+
+![enter image description here](https://www.antoineparat.com/img/parking.png)
 
 This website displays real-time data about parking in Poitiers.
 
