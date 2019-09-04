@@ -1,11 +1,13 @@
 # Real time parking in Poitiers
 ---
 
-This project displays real-time data about parking in Poitiers.
+This website displays real-time data about parking in Poitiers.
 
-## Fetch API
+# Features
 
-I'm using fetch API to get data through the Poitiers' openData API. 
+## Open Data
+
+I'm using [Open Data Poitiers]([https://data.grandpoitiers.fr/pages/accueil/] API to fecth real-time infos.
 
 ## Mapbox routing API
 
