@@ -23,12 +23,12 @@
         height: 50px;
         position: fixed;
         left: 0;
-        bottom: 0;
+        bottom: 0px;;
         width: 100%;
         background-color: #47B2D0;
         color: white;
         font-size : 0.7rem;
-      }
+    }    
 }
 
 @media screen and (min-width : 1078px) {
@@ -102,7 +102,7 @@
         background-color: #47B2D0;
         color: white;
         font-size : 0.7rem;
-      }
+    }
 }
 
 body {
@@ -115,7 +115,7 @@ header {
 }
 
 header p {
-    width: 400px;
+    width: 500px;
     font-family: 'nunito', cursive;
     font-size: 2.5rem;
     color : white;
@@ -172,4 +172,4 @@ header p {
     color: #444444;
     overflow : scroll;
     display: none;
-}
+}   
