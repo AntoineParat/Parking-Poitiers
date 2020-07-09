@@ -1,6 +1,6 @@
 
 const endPoint =
-  "https://data.grandpoitiers.fr/api/records/1.0/search/?dataset=mobilites-stationnement-des-parkings-en-temps-reel&facet=nom";
+  "https://data.opendatasoft.com/api/records/1.0/search/?dataset=park-indigo-disponibilite-temps-reel%40issy-les-moulineaux&sort=value_free_spots&facet=value_status&facet=ville&facet=name";
 const data = [];
 const distanceArray= [];
 const parkingCoordinates = [];
@@ -13,12 +13,12 @@ const mAj = document.querySelector('#maj');
 /*------------- CREATING THE MAP ---------*/
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiYW50b2luZXBhcmF0IiwiYSI6ImNqdXZnOG9hOTAxOWozeXFiZHQzaTVxMm0ifQ.G80c_FyQenvcgMSStI2kKg";
+  "pk.eyJ1IjoiYW50b2luZXBhcmF0IiwiYSI6ImNrY2VycG5ndzA0NjIyd2xtZ2E5MGY4ODcifQ.JBBJ4cROmDLBSvh3Els-Zw";
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/streets-v11",
-  center: [0.339, 46.581], // starting position
-  zoom: 14 // starting zoom
+  center: [2.2685, 48.8267], // starting position
+  zoom: 13 // starting zoom
 });
 
 var canvas = map.getCanvasContainer();
@@ -103,12 +103,13 @@ function getTime () {
 /*------------- INFO FIELDS' TEXT CONTENT  ---------*/
 
 function fillFields(dataset) {
+  const remplissage = dataset.records[currentParking[0]].fields.remplissage;
   freeSations.textContent =
-    dataset.records[currentParking[0]].fields.places_restantes;
+    dataset.records[currentParking[0]].fields.nombre_de_places_contractuelles;
   txRempl.textContent =
-    dataset.records[currentParking[0]].fields.taux_doccupation.toFixed(1) + " %";
+    remplissage!== undefined ? remplissage.toFixed(1) + " %" : "Données manquantes" 
   name.textContent = 
-    dataset.records[currentParking[0]].fields.nom;
+    dataset.records[currentParking[0]].fields.name;
 }
 
 /*------------- FIND & DISPLAY CLOSEST PARKING---------*/
@@ -174,7 +175,6 @@ function displayPark () {
 function currentPark (e) {
   currentParking.shift();
   currentParking.push(e); 
-  console.log(currentParking) 
 }
 
 /*------------- ROUTING---------*/
