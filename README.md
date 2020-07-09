@@ -8,7 +8,7 @@ This website displays real-time data about parking at Issy-les-Moulineaux.
 
 ## Open Data
 
-I'm using [Open Data Poitiers](https://data.opendatasoft.com/explore/dataset/park-indigo-disponibilite-temps-reel%40issy-les-moulineaux/api/?flg=fr&sort=value_free_spots) API to fetch real-time infos.
+I'm using [Open Data Issy-les-Moulineaux](https://data.opendatasoft.com/explore/dataset/park-indigo-disponibilite-temps-reel%40issy-les-moulineaux/api/?flg=fr&sort=value_free_spots) API to fetch real-time infos.
 
 ## Mapbox routing API
 
